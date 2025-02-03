@@ -8,24 +8,22 @@ namespace ConsoleApp19
 {
     internal class Program
     {
-        static void AP(int a1, int d)
+        static void AP(int a1, double d)
         {
-            int t = 0;
-            for (int i = 0; i < 5; i++)
-            {
-                Console.Write(a1 + i * d + " ");
-                
+            double t = 0;
+            for (int i = 0; i < 150; i++)
+            {              
                 t += a1 + i * d;
             }
             Console.WriteLine($"sum = {t}");
         }
         /// <summary>
-        /// Задача 2. Вывести первые пять членов арифметической прогрессии (с использованием цикла) и найти их общую сумму,
-        /// если a1=1, d=4 (например, 1  5  9  13  17, sum=45).        /// </summary>
+        /// Задача 4. Составьте программу вычисления суммы 150 первых членов арифметической прогрессии, если a1= –200; d = 0,2.
+        /// </summary>
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-            AP(1, 4);
+            AP(-200, 0.2);
 
             Console.ReadLine();
         }
