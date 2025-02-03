@@ -10,11 +10,14 @@ namespace ConsoleApp19
     {
         static void AP(int a1, int d)
         {
+            int t = 0;
             for (int i = 0; i < 5; i++)
             {
                 Console.Write(a1 + i * d + " ");
+                
+                t += a1 + i * d;
             }
-            Console.WriteLine();
+            Console.WriteLine($"sum = {t}");
         }
         /// <summary>
         /// Задача 1. Вывести первые пять членов арифметической прогрессии (с использованием цикла), если a1=1, d=4 (например, 1  5  9  13  17).
