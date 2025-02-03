@@ -8,24 +8,24 @@ namespace ConsoleApp19
 {
     internal class Program
     {
-        static void AP(int a1, int d)
+        static void D(int a, int b, int m)
         {
-            int t = 0;
-            for (int i = 0; i < 5; i++)
+            int total = 0;
+            for (int i = 0; i < m; i++)
             {
-                Console.Write(a1 + i * d + " ");
-                
-                t += a1 + i * d;
+                total += a + i * b;
             }
-            Console.WriteLine($"sum = {t}");
+            Console.WriteLine("Сумма через 10 месяцев: " + total);
         }
         /// <summary>
-        /// Задача 1. Вывести первые пять членов арифметической прогрессии (с использованием цикла), если a1=1, d=4 (например, 1  5  9  13  17).
+        /// Задача 3. Родители ко дню рождения своего сына Андрея решили купить и обновить ему мобильный телефон.
+        /// Для этого они в первый месяц отложили 100 руб., а в каждый последующий на 50 рублей больше.
+        /// Какая сумма будет через десять месяцев? 
         /// </summary>
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-            AP(1, 4);
+            D(100, 50, 10);
 
             Console.ReadLine();
         }
