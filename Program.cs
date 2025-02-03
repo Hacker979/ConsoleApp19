@@ -8,22 +8,32 @@ namespace ConsoleApp19
 {
     internal class Program
     {
-        static void AP(int a1, double d)
+        static void P(double startDist, double maxDist, double totalDist, double g)
         {
-            double t = 0;
-            for (int i = 0; i < 150; i++)
-            {              
-                t += a1 + i * d;
+            double d = startDist, s = startDist;
+            int p1 = 1;
+            int p2 = 1;
+
+            while (d <= maxDist || s <= totalDist)
+            {
+                p1 = (d <= maxDist) ? p1 + 1 : p1;
+                p2 = (s <= totalDist) ? p2 + 1 : p2;
+
+                d *= g;
+                s += d;
             }
-            Console.WriteLine($"sum = {t}");
+            Console.WriteLine($"В день {p1} лыжник пробежит больше 20 км.");
+            Console.WriteLine($"Суммарный пробег превысит 100 км на день {p2}.");
         }
         /// <summary>
-        /// Задача 4. Составьте программу вычисления суммы 150 первых членов арифметической прогрессии, если a1= –200; d = 0,2.
+        /// Задача 5. Начав тренировки, лыжник в первый день пробежал 10 км. Каждый следующий день он увеличивал пробег на 10% от пробега предыдущего дня. Определить:
+        /// а) в какой день он пробежит больше 20 км;
+        /// б) в какой день суммарный пробег за все дни превысит 100 км.
         /// </summary>
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-            AP(-200, 0.2);
+            P(10, 20, 100, 1.1);
 
             Console.ReadLine();
         }
