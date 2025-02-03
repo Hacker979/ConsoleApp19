@@ -16,6 +16,10 @@ namespace ConsoleApp19
             }
             Console.WriteLine();
         }
+        /// <summary>
+        /// Задача 1. Вывести первые пять членов арифметической прогрессии (с использованием цикла), если a1=1, d=4 (например, 1  5  9  13  17).
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             AP(1, 4);
